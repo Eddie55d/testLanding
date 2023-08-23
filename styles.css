@@ -1,0 +1,278 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: chronicle display;
+  font-style: normal;
+  font-weight: 450;
+  src: local('Chronicle Display'), url('https://fonts.cdnfonts.com/s/38407/Chronicle Display Black.woff') format('woff')
+}
+
+
+
+body {
+  background-color: #0B1D26;
+}
+
+.main {
+  background-color: #0B1D26;
+  color: #FFF;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 100px;
+}
+
+.preview {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  transform-style: preserve-3d;
+}
+
+.previewLayer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.previewImage {
+  background-image: url(./images/background.png);
+  background-size: cover;
+  z-index: 1;
+  transform: translateZ(-100px) scale(2);
+}
+
+.header {
+  height: 25px;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3% 6% 0 0;
+}
+
+.logoWrapper {
+  margin-left: 112px;
+}
+
+
+.navHeader {
+  display: flex;  
+}
+
+a:hover {
+  color: #FBD784;
+}
+
+.navItem:not(:last-child) {
+  margin-right: 40px;
+}
+
+.accountWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.accountTitile {
+  margin-left: 8px;
+}
+
+.mainTitleWrapper {
+  z-index: 38;
+  top: 28%;
+  left: 26%;
+  max-width: 950px;
+}
+
+.firstLine {
+  display: flex;
+  align-items: center;
+}
+
+.line {
+  width: 72px;
+  height: 2px;
+  background-color: #FBD784;
+}
+
+.miniTitle {
+  color: #FBD784;
+  line-height: 22.05px;
+  font-weight: 800;
+  margin-left: 32px;
+  text-transform: uppercase;
+}
+
+.descriptionTitle {
+  font-family: 'Chronicle Display', sans-serif;
+  text-transform: capitalize;
+  margin-top: 32px;
+  font-size: 88px;
+  font-weight: 375;
+  line-height: 100px;
+}
+
+
+.content {
+  position: relative;
+  background-color: #0B1D26;
+
+}
+
+.articleContent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 114px;
+  align-items: center;
+  justify-content: center;
+  padding: 10% 10% 0 10%;
+
+}
+
+.articleContent:last-child {
+  margin-bottom: 0;
+}
+
+
+.articleInfo {
+  position: relative;
+  margin-left: 100px;
+  max-width: 632px;
+}
+
+.articleContent:nth-child(2) .articleInfo {
+  margin-left: 0;
+}
+
+.articleNumber {
+  position: absolute;
+  margin-top: 38px;
+  color: #FFF;
+  font-family: Gilroy;
+  font-size: 240px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 240px;
+  opacity: 0.1;
+  top: -150px;
+  left: -120px;
+}
+
+h2 {
+  font-family: Chronicle Display;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 375;
+  line-height: normal;
+  padding-top: 27px;
+}
+
+p {
+  color: #FFF;
+  font-family: Gilroy;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  padding-top: 27px;
+}
+
+.more {
+  color: var(--accent, #FBD784);
+  font-family: Gilroy;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding-top: 27px;
+}
+
+.arrowLink {
+  padding-left: 18px;
+}
+
+.articleImg_1 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.articleImg_2 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 10% 10% 0 10%;
+  color: #fff;
+}
+
+.footerTitle {
+  font-family: Gilroy;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  margin-top: 24px;
+  max-width: 300px;
+}
+
+.copyRight {
+  font-family: Gilroy;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+  margin-top: 122px;
+  opacity: 0.5;
+}
+
+.navFooter {
+  display: flex;
+}
+
+.navFooterItem:not(:last-child) {
+  margin-right: 212px;
+}
+
+.navFooterTitle {
+  color: var(--accent, #FBD784);
+  font-family: Gilroy;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  margin-bottom: 24px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  color: #FFF;
+  font-family: Gilroy;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+  text-decoration: none;
+}
+
+.gradient {
+  height: 200px;
+  width: 100%;
+  position: relative;
+  background-image: linear-gradient(to bottom, transparent 0%, #0B1D26 100%);
+}
